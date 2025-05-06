@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".WelcomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/registrationTextHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="-22dp"
+        android:src="@drawable/img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/img_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/vectorMan"
+        android:layout_width="300dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/img_2"
+        app:layout_constraintEnd_toEndOf="@id/registrationTextHeader"
+        app:layout_constraintStart_toStartOf="@id/registrationTextHeader"
+        app:layout_constraintTop_toBottomOf="@id/registrationTextHeader" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_design"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/vectorMan"
+        app:layout_constraintStart_toStartOf="@id/vectorMan"
+        app:layout_constraintTop_toBottomOf="@id/vectorMan" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_design"
+        android:text="@string/login"
+        android:textColor="#700BEF"
+        android:textSize="20sp"
+        android:backgroundTint="#d5b6fb"
+        app:layout_constraintEnd_toEndOf="@id/vectorMan"
+        app:layout_constraintStart_toStartOf="@id/vectorMan"
+        app:layout_constraintTop_toBottomOf="@id/registerButton"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
