@@ -1,9 +1,10 @@
-package com.example.davaleba17
+package com.example.davaleba17.Fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.navigateUp
+import com.example.davaleba17.BaseFragment
+import com.example.davaleba17.R
 import com.example.davaleba17.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>(FragmentWelcomeBinding::inflate) {

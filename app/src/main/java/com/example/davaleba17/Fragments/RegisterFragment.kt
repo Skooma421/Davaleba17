@@ -1,21 +1,19 @@
-package com.example.davaleba17
+package com.example.davaleba17.Fragments
 
 import android.os.Bundle
-import android.util.Log.d
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.davaleba17.BaseFragment
+import com.example.davaleba17.R
+import com.example.davaleba17.ViewModels.RegistrationViewModel
 import com.example.davaleba17.databinding.FragmentRegisterBinding
-import com.example.davaleba17.network.RegisterRequest
-import com.example.davaleba17.network.RetrofitClient
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterBinding::inflate) {
+
+    private val viewModel: RegistrationViewModel by viewModels()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -35,7 +33,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                     showError("Unauthorized email format")
                     return@setOnClickListener
                 }
-                register(email, password)
+                viewModel.register(email, password)
                 registerButton.setOnClickListener {
                     findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                 }
@@ -50,21 +48,9 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                 }
             }
         }
-
     }
 
     private fun showError(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-    }
-
-    private fun register(email: String, password: String) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val request = RegisterRequest(email, password)
-                val response = RetrofitClient.RegisterApi.register(request)
-            } catch (e: Exception) {
-                d("error", "$e")
-            }
-        }
     }
 }

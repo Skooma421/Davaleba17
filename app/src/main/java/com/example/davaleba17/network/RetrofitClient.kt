@@ -1,5 +1,6 @@
 package com.example.davaleba17.network
 
+import com.example.davaleba17.network.Api.AuthenticationApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -17,11 +18,11 @@ object RetrofitClient {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
-    val loginApi: LoginApi by lazy {
-        retrofit.create(LoginApi::class.java)
+    val loginApi: AuthenticationApi by lazy {
+        retrofit.create(AuthenticationApi::class.java)
     }
 
-    val RegisterApi: RegisterApi by lazy{
+    val RegisterApi: AuthenticationApi by lazy{
         retrofit.create(RegisterApi::class.java)
     }
 }

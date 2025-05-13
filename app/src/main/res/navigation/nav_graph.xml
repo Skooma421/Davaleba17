@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.example.davaleba17.WelcomeFragment"
+        android:name="com.example.davaleba17.Fragments.WelcomeFragment"
         android:label="Welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_loginFragment"
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.davaleba17.LoginFragment"
+        android:name="com.example.davaleba17.Fragments.LoginFragment"
         android:label="Login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.davaleba17.RegisterFragment"
+        android:name="com.example.davaleba17.Fragments.RegisterFragment"
         android:label="Register">
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
