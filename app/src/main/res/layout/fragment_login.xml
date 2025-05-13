@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".LoginFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -21,11 +22,85 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/manVectorWalking"
-        android:layout_width="185dp"
+        android:layout_width="165dp"
         android:layout_height="285dp"
         android:layout_marginTop="20dp"
+        android:src="@drawable/img_7"
         app:layout_constraintEnd_toEndOf="@id/loginText"
         app:layout_constraintStart_toStartOf="@id/loginText"
         app:layout_constraintTop_toBottomOf="@id/loginText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailField"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_design"
+        android:backgroundTint="#d5b6fb"
+        android:hint="@string/email"
+        android:padding="5dp"
+        android:paddingStart="100dp"
+        android:textColorHint="#b783f8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manVectorWalking" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="33dp"
+        android:src="@drawable/img_5"
+        app:layout_constraintBottom_toBottomOf="@id/emailField"
+        app:layout_constraintStart_toStartOf="@id/emailField"
+        app:layout_constraintTop_toTopOf="@id/emailField" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passwordField"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_design"
+        android:backgroundTint="#d5b6fb"
+        android:hint="@string/password"
+        android:padding="5dp"
+        android:paddingStart="100dp"
+        android:textColorHint="#b783f8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailField" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/eyeIcon"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/baseline_remove_red_eye_24"
+        app:layout_constraintBottom_toBottomOf="@id/passwordField"
+        app:layout_constraintEnd_toEndOf="@id/passwordField"
+        app:layout_constraintTop_toTopOf="@id/passwordField" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="33dp"
+        android:src="@drawable/img_6"
+        app:layout_constraintBottom_toBottomOf="@id/passwordField"
+        app:layout_constraintStart_toStartOf="@id/passwordField"
+        app:layout_constraintTop_toTopOf="@id/passwordField" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/button_design"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@id/emailField"
+        app:layout_constraintStart_toStartOf="@id/emailField"
+        app:layout_constraintTop_toBottomOf="@id/passwordField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

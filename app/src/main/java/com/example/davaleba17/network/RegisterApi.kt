@@ -1,20 +1,20 @@
 package com.example.davaleba17.network
-import retrofit2.http.GET
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
 
-interface LoginApi {
-    @POST("api/login")
-    suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
+interface RegisterApi {
+    @POST("api/register")
+    suspend fun register(@Body request: RegisterRequest): Response<RegisterResponse>
 }
 
-data class LoginRequest(
+data class RegisterRequest(
     val email: String,
     val password: String
 )
 
-data class LoginResponse(
+data class RegisterResponse(
+    val id: Int? = null,
     val token: String? = null,
     val error: String? = null
 )
