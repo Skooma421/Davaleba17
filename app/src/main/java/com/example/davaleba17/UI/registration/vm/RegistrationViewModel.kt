@@ -1,16 +1,16 @@
-package com.example.davaleba17.ViewModels
+package com.example.davaleba17.UI.registration.vm
 
 import android.util.Log.d
 import androidx.lifecycle.ViewModel
-import com.example.davaleba17.network.Models.RegisterRequest
-import com.example.davaleba17.network.RetrofitClient
+import com.example.davaleba17.network.models.RegisterRequest
+import com.example.davaleba17.network.retrofit.RetrofitClient
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class RegistrationViewModel :ViewModel() {
+class RegistrationViewModel : ViewModel() {
 
-     public fun register(email: String, password: String) {
+    public fun register(email: String, password: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val request = RegisterRequest(email, password)

@@ -1,13 +1,13 @@
-package com.example.davaleba17.Fragments
+package com.example.davaleba17.UI.registration.screen
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.davaleba17.BaseFragment
+import com.example.davaleba17.Util.BaseFragment
 import com.example.davaleba17.R
-import com.example.davaleba17.ViewModels.RegistrationViewModel
+import com.example.davaleba17.UI.registration.vm.RegistrationViewModel
 import com.example.davaleba17.databinding.FragmentRegisterBinding
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterBinding::inflate) {

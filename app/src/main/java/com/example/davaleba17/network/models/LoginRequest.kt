@@ -1,4 +1,4 @@
-package com.example.davaleba17.network.Models
+package com.example.davaleba17.network.models
 
 data class LoginRequest(
     val email: String,

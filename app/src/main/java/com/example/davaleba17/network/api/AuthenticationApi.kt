@@ -1,9 +1,9 @@
-package com.example.davaleba17.network.Api
+package com.example.davaleba17.network.api
 
-import com.example.davaleba17.network.Models.LoginRequest
-import com.example.davaleba17.network.Models.LoginResponse
-import com.example.davaleba17.network.Models.RegisterRequest
-import com.example.davaleba17.network.Models.RegisterResponse
+import com.example.davaleba17.network.models.LoginRequest
+import com.example.davaleba17.network.models.LoginResponse
+import com.example.davaleba17.network.models.RegisterRequest
+import com.example.davaleba17.network.models.RegisterResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
